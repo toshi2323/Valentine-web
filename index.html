@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Surprise 💖</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffccd5;
+            font-family: 'Arial', sans-serif;
+            overflow-y: scroll; /* Enable vertical scrolling */
+            height: 100vh;
+            padding-bottom: 50px; /* Add space at the bottom for scrolling */
+        }
+        h1 {
+            font-size: 3em;
+            color: #d63384;
+            margin-top: 50px;
+        }
+        #message {
+            font-size: 1.5em;
+            color: #6a0572;
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .image-container {
+            display: none; /* Ensure the images are hidden initially */
+            margin-top: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .image-container img {
+            width: 300px;
+            border-radius: 15px;
+        }
+        button {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #e91e63;
+        }
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 2em;
+            animation: float 5s linear infinite;
+        }
+        @keyframes float {
+            from { transform: translateY(100vh); opacity: 1; }
+            to { transform: translateY(-10vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Valentine's Day, Mahal ❤️</h1>
+    <button onclick="revealMessage()">Pindutin mo po</button>
+    <div id="message">Hi baby!!! so as you can see i added these two screenshots of mine because i want you to see na kung ano yung mga una natin dati or naganap satin noon HAHAHA tignan mo jan oh nung unang interaction natin HAHAHAHAHAHA ang galang ko pa parang timang HAHAHAHA sorry pala mahal eto lang na add ko diko mahanap yung iba eh anyways look yung isang pic nung mag lalaro tayo nyan HAHAHAHA cute, mahal i hope  more memories pa mabuo natin together and also masasayang pangyayari satin by i will treasure all this kung alam mo lang gaano ako ka thankful sayo even though nag aaway man hehe im still thankful kasi you came into my life, by i cant even imagine my world without you in it i dont want to go back on that silent dark place i came from you give light to my life and i want that light stay for the rest of our lives i'll do my best as your asawa and will treat you right na iloveyouuuuuuusomuchhhhhh eto lang muna kaya kong gawin by ehhhhh HAHAHAHAHAHAHAAHA simple lang muna pag alam ko na talaga gumawa ng website mas maganda na dito mwaaa happy happy valentines baby!! 💕</div>
+
+    <div class="image-container" id="image-container">
+        <img src="image.jpg" alt="Lovely Surprise Image 1">
+        <img src="imagesss.jpg.jpg" alt="Lovely Surprise Image 3">
+        <!-- Add more images as needed -->
+    </div>
+
+    <script>
+        function revealMessage() {
+            document.getElementById('message').style.display = 'block';
+            document.getElementById('image-container').style.display = 'flex'; // Show the images
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.classList.add('heart');
+            document.body.appendChild(heart);
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            setTimeout(() => heart.remove(), 5000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
